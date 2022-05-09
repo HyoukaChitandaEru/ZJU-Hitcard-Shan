@@ -241,16 +241,7 @@ def main(username, password):
             if res['m'].find("已经") != -1: # 已经填报过了 不报错
                 pass
                
-                api = "https://sc.ftqq.com/SCT145788TLeAdXO1oZ8fj2lC2KjPINAof.send"
-                title = "今天已经打卡过了！"
-                content = """
-                ZJU健康打卡推送
-                """
-                data = {
-                "text":title,
-                "desp":content
-                }
-                req = requests.post(api,data = data)
+               
             
             elif res['m'].find("验证码错误") != -1: # 验证码错误
                 print('再次尝试')
